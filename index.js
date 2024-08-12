@@ -1,4 +1,4 @@
-const http = require('http');
+
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 const path = require('path');
@@ -14,12 +14,6 @@ const bot = new TelegramBot(token, { polling: true });
 // خادم HTTP بسيط
 const PORT = process.env.PORT || 3000; // استخدام المنفذ الذي توفره الاستضافة أو 3000 كافتراضي
 
-http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Bot is running\n');
-}).listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
 
 // دالة لفك تشفير نص معين
 function decryptText(encryptedText, secretKey) {
