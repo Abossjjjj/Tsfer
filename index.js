@@ -1,14 +1,26 @@
-const TelegramBot = require('node-telegram-bot-api'); // مكتبة بوت تيليجرام
-const fs = require('fs'); // مكتبة نظام الملفات لإدارة الملفات
-const path = require('path'); // مكتبة لإدارة مسارات الملفات
-const CryptoJS = require('crypto-js'); // مكتبة لتشفير وفك تشفير النصوص
-const fetch = require('node-fetch'); // مكتبة لتحميل الملفات من الروابط
+const http = require('http');
+const TelegramBot = require('node-telegram-bot-api');
+const fs = require('fs');
+const path = require('path');
+const CryptoJS = require('crypto-js');
+const fetch = require('node-fetch');
 
 // وضع التوكن الخاص بالبوت
 const token = '7201159369:AAFeKi6GT73iDalEH8_e8W9x41weAhb0NmU';
 
 // إنشاء بوت تيليجرام
 const bot = new TelegramBot(token, { polling: true });
+
+// خادم HTTP بسيط
+const PORT = process.env.PORT || 3000; // استخدام المنفذ الذي توفره الاستضافة أو 3000 كافتراضي
+http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Bot is running\n');
+}).listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+// بقية الكود الخاص بالبوت هنا
 
 // دالة لفك تشفير نص معين
 function decryptText(encryptedText, secretKey) {
