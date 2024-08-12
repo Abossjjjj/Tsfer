@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 const path = require('path');
 const CryptoJS = require('crypto-js');
-const fetch = require('node-fetch');
+
 
 // وضع التوكن الخاص بالبوت
 const token = '7201159369:AAFeKi6GT73iDalEH8_e8W9x41weAhb0NmU';
