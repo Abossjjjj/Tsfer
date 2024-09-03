@@ -1,19 +1,27 @@
 {
   "name": "telegram-bot",
   "version": "1.0.0",
-  "description": "Telegram bot for encrypting and decrypting JavaScript files",
+  "description": "Telegram bot using Telegraf and a Telegram bot with VIP user management and various services",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {
-    "crypto-js": "^4.1.1",
-    "node-fetch": "^2.6.1",
-    "node-telegram-bot-api": "^0.66.0",
-    "path": "^0.12.7" 
-  },
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "multer": "^1.4.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "path": "^0.12.7",
+    "telegraf": "^4.7.0",
+    "dotenv": "^16.3.1",
+    "node-persist": "^3.1.0",
+    "uuid": "^9.0.0"
+  },
   "engines": {
     "node": ">=14.0.0"
   }
