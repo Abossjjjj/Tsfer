@@ -604,7 +604,7 @@ if (action === 'get_joke') {
             temperature: 0.8
         }, {
             headers: {
-                'Authorization': `Bearer uXr5n9GNQTpWYxJ67QVHBNYi25UQxJtl77uAMm9d`,
+                'Authorization': `Bearer zDNdqGCAmLJQgJTBIZ4npd9fJZ0QnCbwFj3ynySR`,
                 'Content-Type': 'application/json'
             }
         });
@@ -625,7 +625,7 @@ if (action === 'get_joke') {
             temperature: 0.8
         }, {
             headers: {
-                'Authorization': `Bearer uXr5n9GNQTpWYxJ67QVHBNYi25UQxJtl77uAMm9d`,
+                'Authorization': `Bearer zDNdqGCAmLJQgJTBIZ4npd9fJZ0QnCbwFj3ynySR`,
                 'Content-Type': 'application/json'
             }
         });
